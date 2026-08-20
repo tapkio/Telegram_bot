@@ -50,7 +50,7 @@ user_data = {}
 @dp.message(Command("start"))
 async def start_command(message: types.Message):
     try:
-        photo = FSInputFile("gift.jpg")
+        photo = FSInputFile("gifft.jpg")
         caption = "Брось кубик и получи подарок👇🎁"
         await message.answer_photo(
             photo=photo,
