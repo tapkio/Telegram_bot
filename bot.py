@@ -1,4 +1,4 @@
-import logging
+рimport logging
 import asyncio
 import random
 from aiogram import Bot, Dispatcher, types, F
@@ -256,4 +256,10 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    import time
+    while True:
+        try:
+            asyncio.run(main())
+        except Exception as e:
+            print(f"❌ Бот упал: {e}. Перезапуск через 5 секунд...")
+            time.sleep(5)
